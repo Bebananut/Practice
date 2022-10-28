@@ -1,1 +1,0 @@
-Mary and Samantha arrived at the bus station early but waited until noon for the bus.
