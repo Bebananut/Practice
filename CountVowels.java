@@ -1,19 +1,13 @@
 import java.util.*;
-class CountVowels{
+class NumberOfVowel{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Input :");
         String input = sc.nextLine();
-        input = removeWasteCharacter(input);
-        System.out.println("Total vowel :"+findVowels(input));
+        System.out.println("Total vowel :"+countVowel(input));
     }
 
-    public static String removeWasteCharacter(String input){
-        input = input.replace(" ", "").replace(".", "");
-        return input; 
-    }
-
-    public static int findVowels(String input){
+    public static int countVowel(String input){
         int count = 0;
         String[] vowels = {"a","e","i","o","u"}; 
         input = input.toLowerCase();
