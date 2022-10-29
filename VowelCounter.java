@@ -11,21 +11,21 @@ class VowelCounter{
         int count = 0;
         input = input.toLowerCase();
         for(int i = 0 ; i<input.length() ; i++ ){
-            String splitCharactor = input.substring(i, i+1);
-            if(isVowel(splitCharactor)){
+            Character character = input.charAt(i);
+            if(isVowel(character)){
                 count++;
             }
         }
         return count;
     }
 
-    public static boolean isVowel(String splitCharactor){
-        if(splitCharactor.equals("a")||splitCharactor.equals("e")||splitCharactor.equals("i")
-            ||splitCharactor.equals("o")||splitCharactor.equals("u")){
+    public static boolean isVowel(Character character){
+        if(character.equals('a')||character.equals('e')||character.equals('i')
+            ||character.equals('o')||character.equals('u')){
             return true;        
         }else{
             return false;
         }
     }
-    
+
 }
