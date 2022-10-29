@@ -4,10 +4,10 @@ class VowelCounter{
         Scanner sc = new Scanner(System.in);
         System.out.print("Input :");
         String input = sc.nextLine();
-        System.out.println("Total vowel :"+countVowel(input));
+        System.out.println("Total vowel :"+count(input));
     }
 
-    public static int countVowel(String input){
+    public static int count(String input){
         int count = 0;
         input = input.toLowerCase();
         for(int i = 0 ; i<input.length() ; i++ ){
