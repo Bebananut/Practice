@@ -1,9 +1,9 @@
 import java.util.*;
 class VowelCounter{
     public static void main(String[] args) {
-        Scanner inputReceiver = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input :");
-        String input = inputReceiver.nextLine();
+        String input = scanner.nextLine();
         System.out.println("Total vowel :"+countVowel(input));
     }
 
@@ -19,9 +19,9 @@ class VowelCounter{
     }
 
     public static boolean isVowel(char character){
-        List<String> vowels = Arrays.asList("a", "e", "i", "o","u");
+        List<Character> vowels = Arrays.asList('a','e','i','o','u');
         char characterLowerCase = Character.toLowerCase(character);
-        return vowels.contains(Character.toString(characterLowerCase));
+        return vowels.contains(characterLowerCase);
     }
 
 }
