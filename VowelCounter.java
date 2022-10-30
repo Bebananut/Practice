@@ -10,7 +10,7 @@ class VowelCounter{
     public static int countVowel(String input){
         int count = 0;
         for(int i = 0 ; i<input.length() ; i++ ){
-            Character character = input.charAt(i);
+            char character = input.charAt(i);
             if(isVowel(character)){
                 count++;
             }
@@ -18,10 +18,10 @@ class VowelCounter{
         return count;
     }
 
-    public static boolean isVowel(Character character){
-        Character characterLowerCase = Character.toLowerCase(character);
-        return (characterLowerCase.equals('a')||characterLowerCase.equals('e')||characterLowerCase.equals('i')
-        ||characterLowerCase.equals('o')||characterLowerCase.equals('u'));
+    public static boolean isVowel(char character){
+        List<String> vowels = Arrays.asList("a", "e", "i", "o","u");
+        char characterLowerCase = Character.toLowerCase(character);
+        return vowels.contains(Character.toString(characterLowerCase));
     }
 
 }
