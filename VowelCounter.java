@@ -9,7 +9,6 @@ class VowelCounter{
 
     public static int countVowel(String input){
         int count = 0;
-        input = input.toLowerCase();
         for(int i = 0 ; i<input.length() ; i++ ){
             Character character = input.charAt(i);
             if(isVowel(character)){
@@ -20,8 +19,9 @@ class VowelCounter{
     }
 
     public static boolean isVowel(Character character){
-        if(character.equals('a')||character.equals('e')||character.equals('i')
-            ||character.equals('o')||character.equals('u')){
+        Character characterLowerCase = Character.toLowerCase(character);
+        if(characterLowerCase.equals('a')||characterLowerCase.equals('e')||characterLowerCase.equals('i')
+            ||characterLowerCase.equals('o')||characterLowerCase.equals('u')){
             return true;        
         }else{
             return false;
