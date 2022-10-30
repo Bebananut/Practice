@@ -20,12 +20,8 @@ class VowelCounter{
 
     public static boolean isVowel(Character character){
         Character characterLowerCase = Character.toLowerCase(character);
-        if(characterLowerCase.equals('a')||characterLowerCase.equals('e')||characterLowerCase.equals('i')
-            ||characterLowerCase.equals('o')||characterLowerCase.equals('u')){
-            return true;        
-        }else{
-            return false;
-        }
+        return (characterLowerCase.equals('a')||characterLowerCase.equals('e')||characterLowerCase.equals('i')
+        ||characterLowerCase.equals('o')||characterLowerCase.equals('u'));
     }
 
 }
