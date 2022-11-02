@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.stream.Collectors;
+
 class VowelCounter{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -8,20 +10,9 @@ class VowelCounter{
     }
 
     public static int countVowel(String input){
-        int count = 0;
-        for(int i = 0 ; i<input.length() ; i++ ){
-            char character = input.charAt(i);
-            if(isVowel(character)){
-                count++;
-            }
-        }
-        return count;
-    }
-
-    public static boolean isVowel(char character){
         List<Character> vowels = Arrays.asList('a','e','i','o','u');
-        char characterLowerCase = Character.toLowerCase(character);
-        return vowels.contains(characterLowerCase);
+        List<Character> listOfCharacter  = input.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
+        return (int) listOfCharacter.stream().filter(character->vowels.contains(Character.toLowerCase(character))).count();
     }
 
 }
