@@ -11,7 +11,7 @@ class VowelCounter{
 
     public static int countVowel(String input){
         List<Character> characters  = input.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
-        return (int) characters.stream().filter(character->isVowel(character)).count();
+        return (int) characters.stream().filter(character -> isVowel(character)).count();
     }
 
     public static boolean isVowel(char character){
