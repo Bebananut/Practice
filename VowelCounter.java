@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-class VowelCounter{
+class VowelCounter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input :");
@@ -11,7 +11,7 @@ class VowelCounter{
 
     public static int countVowel(String input) {
         List<Character> characters  = input.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
-        return (int) characters.stream().filter(character -> isVowel(character)).count();
+        return characters.stream().filter(character -> isVowel(character)).mapToInt(count -> 1).sum();
     }
 
     public static boolean isVowel(char character) { 
