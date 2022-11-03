@@ -10,9 +10,9 @@ class VowelCounter {
     }
 
     public static int countVowel(String input) {
-        List<Character> characters  = input.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
-        return characters.stream().filter(character -> isVowel(character)).mapToInt(count -> 1).sum();
-    }
+        List<Character> characters = input.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
+        return Math.toIntExact(characters.stream().filter(character -> isVowel(character)).count());
+    }    
 
     public static boolean isVowel(char character) { 
         char characterLowerCase = Character.toLowerCase(character);
