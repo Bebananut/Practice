@@ -6,7 +6,7 @@ class VowelCounter {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input :");
         String input = scanner.nextLine();
-        System.out.println("Total vowel :"+countVowel(input));
+        System.out.println("Total vowels :"+countVowel(input));
     }
 
     public static int countVowel(String input) {
