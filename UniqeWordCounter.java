@@ -9,8 +9,9 @@ class UniqeWordCounter {
     }
 
     public static int countUniqueWord(String input) {
-        String[] words = input.replace(".","").split("\\s+");
+        String[] words = input.replace(".","").toLowerCase().split("\\s+");
         return Math.toIntExact(Arrays.stream(words).distinct().count());
     }
 
 }
+// This is a cat. This is a rat. This is a bat
